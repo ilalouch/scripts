@@ -9,7 +9,6 @@
 import codecs
 
 
-
 old_toks = codecs.open("tokens.txt", encoding='utf-8')
 new_toks = codecs.open("toks_morpar_nouns.txt", encoding='utf-8')
 
@@ -51,14 +50,14 @@ for lines in new_toks:
     else: #adds new tokens to the lexicon with prons=auto
 	old_dict[new_tok.strip()] = new_value +" prons=auto" 
 		
-outTok = codecs.open("tokens-result.txt", "w", encoding='utf-8')
+outTok = codecs.open("tokens-result.txt", "w", encoding='utf-8') #write new tokens to file
 for k,v in old_dict.items():
     print k,v
     if v: outTok.write (k +  "\t:: " + v + "\n")
     else: outTok.write (k + "\n")
 
 outTok = codecs.open("tokens-result.txt", "r", encoding='utf-8')
-outTok1 = codecs.open("tokens_nospace.txt", "w", encoding='utf-8')
+outTok1 = codecs.open("tokens_nospace.txt", "w", encoding='utf-8') #remove empty lines
 
 for line in outTok:
     if not line.strip(): continue
