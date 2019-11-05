@@ -1,12 +1,12 @@
-# Merging files script
+# Script for merging files
 
 #todo: python3 version
 
-Script written for a project. 
+Script written for a project - it merges files based on words in the 1st column. 
 
-It's supposed to merge the information from 2 files into a new one. Some items in the old file have a description, others don't. All the items in the new file have a description.
+Some items in the old file have a description, others don't. All the items in the new file have a description.
 
-By comparing the 2 files the script does the following things: 
+By comparing the 2 files, the script does the following things: 
   1. if an item is present only in the old file, then the item is only added to the merged file; 
   2. if an item is in both files but with different descriptions, the new description is aded to the old one;
   3. if an item is in the new file, but not in the old one, then it is appended to the merged file;
