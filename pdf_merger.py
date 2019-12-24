@@ -19,16 +19,16 @@ reader3 = PyPDF2.PdfFileReader(pdfFile3)
 writer = PyPDF2.PdfFileWriter()
 
 # iterate over the pages in every pdf file and add them into the final document
-for pageNum in range(reader1.numPages):
-    page = reader1.getPage(pageNum)
+for pagNum in range(reader1.numPages):
+    page = reader1.getPage(pagNum)
     writer.addPage(page)
 
-for pageNum in range(reader2.numPages):
-    page = reader2.getPage(pageNum)
+for pagNum in range(reader2.numPages):
+    page = reader2.getPage(pagNum)
     writer.addPage(page)
 
-for pageNum in range(reader3.numPages):
-    page = reader3.getPage(pageNum)
+for pagNum in range(reader3.numPages):
+    page = reader3.getPage(pagNum)
     writer.addPage(page)
 
 # output the merged pdf into the working directory
