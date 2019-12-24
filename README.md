@@ -1,6 +1,6 @@
 # Script for merging files
 
-#todo: python3 version
+
 
 Script written for a project - it merges files based on words in the 1st column. 
 
